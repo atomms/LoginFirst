@@ -13,32 +13,46 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_world"
         android:textSize="30sp"
-        android:layout_marginLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:text="@string/hello_world"
+        android:text="@string/bye_world"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
         app:layout_constraintStart_toEndOf="@+id/textView1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        app:layout_constraintTop_toBottomOf="@id/textView1"
-        app:layout_constraintStart_toStartOf="@id/textView1"
-        app:layout_constraintEnd_toEndOf="@id/textView2"
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="426dp" />
+        android:text="ok"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/textView2"
+        app:layout_constraintStart_toStartOf="@id/textView1"
+        app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
